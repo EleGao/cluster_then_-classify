@@ -71,5 +71,6 @@ for i in range(Epochs):  # 迭代1000次
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))  # 将结果转换成浮点数
     print("Epoch%d:%f" % (i+1, accuracy.eval({x: test_data, y_: test_label})))
 
+sess.close()
 # pred = sess.run(accuracy, feed_dict={x: test_data, y_: test_label})
 # print(pred)
